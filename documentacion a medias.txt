@@ -1,0 +1,31 @@
+Vulnerabilidades encontradas
+XSS por uso de |safe.
+Falta de validación de formularios.
+Acceso directo a rutas administrativas.
+Eliminación sin control de permisos.
+Edición sin control de permisos.
+Posibles ataques NoSQL por entradas no validadas.
+Correcciones realizadas
+Implementación de login.
+Implementación de roles.
+Validación de entradas.
+Eliminación de |safe.
+Restricción de rutas.
+Uso de POST para operaciones destructivas.
+Validación estricta de IDs y valores.
+
+
+Instrucciones básicas:
+
+Perfil admin:
+
+Usuario: admin
+Contraseña: admin123
+
+Perfil operador:
+
+Usuario: operador
+Contraseña: oper123
+
+
+

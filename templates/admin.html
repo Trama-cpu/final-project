@@ -1,0 +1,52 @@
+{% extends 'plantilla.html' %}
+{% block title %} Sección del Administrador {% endblock %}
+{% block content %}
+  <h2>Panel Administrador</h2>
+  
+  <form method="GET" class="row g-2 mb-4">
+    <div class="col-auto">
+      <input type="text" name="id" class="form-control" placeholder="Filtrar por ID" 
+                value="{{ busqueda }}">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Buscar</button>
+      <a href="/admin" class="btn btn-secondary">Limpiar</a>
+    </div>
+  </form>
+  
+  <div class="alert alert-danger">
+  </div>
+  
+  <table class="table table-bordered table-striped">
+      <thead>
+        <tr><th>ID</th><th>Nombre</th><th>Apellido</th><th>Tipo</th><th>Valor</th><th>Fecha/Hora</th><th>Acciones</th></tr>
+      </thead>
+      <tbody>
+        {% for reg in registros %}
+        <tr>
+            <td>{{ reg.id }}</td>      
+            <td>{{ reg.nombre }}</td>
+            <td>{{ reg.apellido }}</td>
+            <td>{{ reg.tipo }}</td>
+            <td>{{ reg.valor }}</td>
+            <td>{{ reg.fecha_hora }}</td>
+            <td>
+                <a href="/editar/{{ reg.id }}" class="btn btn-sm btn-warning">Modificar</a>
+                <form method="POST"
+                    action="/eliminar/{{ reg.id }}">
+                  <button class="btn btn-danger">
+                    Eliminar
+                  </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  
+  {% if registros|length == 0 %}
+  <div class="alert alert-info">No hay registros</div>
+  {% endif %}
+  
+  <a href="/" class="btn btn-secondary">Volver</a>
+{% endblock %}

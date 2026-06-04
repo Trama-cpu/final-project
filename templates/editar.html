@@ -1,0 +1,35 @@
+{% extends 'plantilla.html' %}
+{% block title %} Edición {% endblock %}
+{% block content %}
+  <h2>Modificar Registro (ID: {{ registro.id }})</h2>
+  <form method="POST" class="card p-4">
+
+    <div class="mb-2">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" class="form-control" value="{{ registro.nombre }}">
+    </div>
+
+    <div class="mb-2">
+      <label>Apellido:</label>
+      <input type="text" name="apellido" class="form-control" value="{{ registro.apellido }}">
+    </div>
+
+    <div class="mb-2">
+      <label>Tipo:</label>
+      <select name="tipo" class="form-select">
+          <option {% if registro.tipo == 'pago' %}selected{% endif %}>pago</option>
+          <option {% if registro.tipo == 'crédito' %}selected{% endif %}>crédito</option>
+      </select>
+    </div>
+
+    <div class="mb-2">
+      <label>Valor:</label>
+      <input type="text" name="valor" class="form-control" value="{{ registro.valor }}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+
+    <a href="/admin" class="btn btn-secondary mt-2">Cancelar</a>
+
+  </form>
+{% endblock %}

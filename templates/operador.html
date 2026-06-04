@@ -1,0 +1,40 @@
+{% extends 'plantilla.html' %}
+{% block title %} Inserción de datos {% endblock %}
+{% block content %}
+  <h2>Panel del Operador</h2>
+  
+  <form method="POST" class="card p-4">
+    <div class="mb-2">
+      <label>ID (número o texto):</label>
+      <input type="text" name="id" class="form-control" required>
+    </div>
+    <div class="mb-2">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-2">
+      <label>Apellido:</label>
+      <input type="text" name="apellido" class="form-control" required>
+    </div>
+    <div class="mb-2">
+      <label>Tipo transacción:</label>
+      <select name="tipo" class="form-select">
+        <option>pago</option>
+        <option>crédito</option>
+      </select>
+    </div>
+    <div class="mb-2">
+      <label>Valor:</label>
+      <input type="text" name="valor" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Guardar</button>
+  </form>
+  
+  {% if mensaje %}
+  <div class="alert alert-info mt-3">{{ mensaje }}</div>
+  {% endif %}
+  
+  <div class="mt-4">
+    <a href="/" class="btn btn-secondary">Volver</a>
+  </div>
+{% endblock %}
