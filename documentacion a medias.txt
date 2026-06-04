@@ -5,6 +5,7 @@ Acceso directo a rutas administrativas.
 Eliminación sin control de permisos.
 Edición sin control de permisos.
 Posibles ataques NoSQL por entradas no validadas.
+
 Correcciones realizadas
 Implementación de login.
 Implementación de roles.
