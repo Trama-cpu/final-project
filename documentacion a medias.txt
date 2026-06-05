@@ -6,7 +6,7 @@ Asegura que tengas pip instalado, para verificar:
 2. escribe el comando "python3 -m pip --version".
 3. Si esta instalado ya, asegurate que este en la version mas nueva usando el comando "python3 -m pip install --upgrade pip".
 
-Sabiendo que pip ya esta instalado, ahora tienes que instalar las dependencias de esta app, en este caso siend "pymongo" y "Flask".
+Sabiendo que pip ya esta instalado, ahora tienes que instalar las dependencias de esta app, en este caso siendo "pymongo" y "Flask".
 
 1. Abre POWERSHELL.
 2. Usa el comando "python -m pip install pymongo" para instalar pymongo.
@@ -14,7 +14,7 @@ Sabiendo que pip ya esta instalado, ahora tienes que instalar las dependencias d
 
 Con suerte, la app deveria abrir y conectarse correctamente.
 
-Simplemente dale click a uno de los dos links y entra los credenciales de el perfil que quieras usar (listadas al fin de este documento.
+Simplemente inicia "app.py", dale click a uno de los dos links y entra los credenciales de el perfil que quieras usar (listadas al fin de este documento.
 
 Vulnerabilidades encontradas
 XSS por uso de |safe.
